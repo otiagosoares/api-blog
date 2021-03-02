@@ -7,8 +7,7 @@ class UserController {
     async create(req, res) {
 
         const { name, email, password, role } = req.body;
-
-        console.log(req.body);
+        console.log('aqio');
         res.send("oopa")
     }
 }
