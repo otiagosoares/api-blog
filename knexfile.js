@@ -1,5 +1,7 @@
+require('dotenv').config();
 // Update with your config settings.
 const path = require('path');
+
 
 module.exports = {
 
@@ -9,7 +11,7 @@ module.exports = {
       host: process.env.HOST_NAME,
       database: process.env.DATABASE_NAME,
       user: process.env.DATABASE_USER,
-      password: process.env.DATABASE_PAS
+      password: process.env.DATABASE_PASS
     },
     migrations: {
       tableName: 'knex_migrations',

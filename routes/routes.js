@@ -14,7 +14,10 @@ const UserMiddleware = require("../middlewares/UserMiddleware");
 router.get('/', HomeController.index);
 
 //Users
-router.post('/user', UserMiddleware.validate, UserController.create);
+router.post('/user', UserMiddleware.validate,
+    UserMiddleware.isEmailValid,
+    UserMiddleware.validateEmailIsUnique,
+    UserController.create);
 
 
 module.exports = router;
